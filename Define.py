@@ -1,2 +1,4 @@
-M = 30
-N = 30
+# Default values
+
+M = 30  # rows
+N = 30  # columns

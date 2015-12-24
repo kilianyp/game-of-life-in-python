@@ -1,9 +1,14 @@
+# Game of life
+# no parallelization
+
+
 import Define
 import numpy as np
 
 
 def gameoflife(matrix):
-    # save matrix
+    # increase neighbours
+
     neighbours = np.zeros([Define.M, Define.N], int)
     for m in range(Define.M):
         for n in range(Define.N):
@@ -31,6 +36,8 @@ def gameoflife(matrix):
                         updateFields(neighbours, m-1, m+1, n-1, n+1, m, n)
     # print "neighbour matrix"
     print neighbours
+
+    # set new values in matrix accourding to rules
     for m in range(Define.M):
         for n in range(Define.N):
             num = neighbours[m, n]
@@ -45,12 +52,12 @@ def gameoflife(matrix):
 
 
 def updateFields(neighbours, oben, unten, links, rechts, y, x):
-    #print "oben: ", oben
-#    print "unten: ", unten
-#    print "links: ", links
-#    print "rechts:", rechts
-#    print "x ", x
-#    print "y ", y
+#   print "oben: ", oben
+#   print "unten: ", unten
+#   print "links: ", links
+#   print "rechts:", rechts
+#   print "x ", x
+#   print "y ", y
     for i in range(oben, unten+1):
 #        print i
         for j in range(links, rechts+1):

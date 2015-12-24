@@ -1,3 +1,6 @@
+# Game of Life in python
+# version 0.1
+
 from Gameoflife import *
 from Matrix import *
 from Testlibrary import *
@@ -5,7 +8,8 @@ import sys
 import time
 import numpy
 import os
-os.system('clear')
+
+
 print "Welcome to Game of Life"
 
 # test cases
